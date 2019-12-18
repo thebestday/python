@@ -11,5 +11,12 @@ print('Hello!', 'student!')
 print('Hello!', 'student!', 123, sep='xxx')
 # бывает важно что бы конец строки был другим символом - and
 print('Hello!', 'student!', 123, sep='xxx', end='yyy')
+print()
 
+
+# Ввод
+age = input('Input your age')
+# Тип переменной которая возвращает input это всегда строка
+# ОПЕРАЦИЯ ПРИВЕДЕНИЯ ТИПОВ ИЗ СТРОКИ СДЕЛАЛИ ЧИСЛО
+print(age, type(int(age)))
 
