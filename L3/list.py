@@ -83,3 +83,34 @@ print(integer_list)
 # insert(позициякудавтавлять, точтобудемвставлять)
 integer_list.insert(2, 1000)
 print(integer_list)
+
+# функция map принимает два аргумента: функцию и аргумент составного типа данных, например, список.
+# например мы хотим каждый элемент списка возвести в квадрат
+# но сначла нужно привести к типу list
+# map(function, list) ----> map -----> list(map)
+integer_list = [9, 3, 6, 2, 4]
+
+# функция str применяется к каждому элементу  integer_list
+# lambda x , каждому элемнту х применяется функция хх*2
+new_integer_list = list(map(lambda x: x**2, integer_list))
+print(new_integer_list)              # элемент стал строкой после применения метода str
+
+# функция фильтр - фильтрация списка согласно некоторому условию
+# придется применить функцию лямбда для фильтрации списка
+# filter
+# те которые меньше 5 остаются в новом списке
+new_integer_list = list(filter(lambda x: x < 5, integer_list))
+print(new_integer_list)
+
+# reduce применяется ко всем элементам списка
+#  и возвращает один элемент
+# например найдем сумму данного списка с помомощью функции reduce()
+# х - это то что было
+# у - это новый элемент
+from functools import reduce
+integer_list = [1,2,3,4]
+sum = reduce(lambda x, y: x + y, integer_list)
+print(sum)
+product = reduce(lambda x, y: x * y, integer_list)
+print(product)
+
