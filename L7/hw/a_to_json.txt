@@ -1,0 +1,1 @@
+["brand, price, year", "Volve, 1.5, 2017 ", "Lada, 0.5, 2018 ", "AUdi, 2.0, 2018", "Skoda, 4.96, 2020", "Toyota, 3.89, 2017", "Honda, 1.28, 2014", "Mitsubishi, 1.25, 2015", "Opel, 0.73, 2014", ""]
