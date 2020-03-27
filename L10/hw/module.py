@@ -7,7 +7,6 @@ class Deck:
     def __init__(self):
         self._cards = [(rank, suit) for suit in self.suits
                                     for rank in self.ranks]
-
     def __len__(self):
         return len(self._cards)
 
@@ -18,10 +17,30 @@ class Deck:
         mix =  random.shuffle(deck._cards)
         return mix
 
+    def allranks(self, x):
+        if x == '6' : return 6
+        if x == '7' : return 7
+        if x == '8' : return 8
+        if x == '9' : return 9
+        if x == '10': return 10
+        if x == 'J' : return 11
+        if x == 'Q' : return 12
+        if x == 'K' : return 13
+        if x == 'A' : return 14
+
+    def list_card(self):
+        self.list_num_card = [int(i) for i in range(0, 36)]
+        # print(deck._cards)
+        # print('list_num_card', self.list_num_card)
+        # for i in self.list_num_card:
+        #     print('КАРТа после ПЕРЕМЕШИВАНИЯ', deck._cards[i], self.list_num_card[i])
+        # print(deck.list_num_card)
+        return self.list_num_card
+
 
     def player_card(self):
-        self.list_num_card = [int(i) for i in range(0, 36)]
-        self.pl_c = random.choice(self.list_num_card)
+        # лучше self.list_num_card чем deck.list_card()
+        self.pl_c = random.choice(self.list_card())
         return self.pl_c
 
     # Раздача игроку
@@ -33,8 +52,9 @@ class Deck:
             card_pl_number.append(a)
             self.cards_pl.append(deck[a])
             self.list_num_card.remove(a)
+        # print('карты игрока cards_pl', self.cards_pl, card_pl_number)
 
-    # Раздача компу
+
     def computer_hand(self):
         self.cards_comp = []
         cards_comp_number = []
@@ -43,8 +63,8 @@ class Deck:
             cards_comp_number.append(b)
             self.cards_comp.append(deck[b])
             self.list_num_card.remove(b)
-
-
+        # print('карты компа cards_comp', self.cards_comp, cards_comp_number)
+        # print("---cards_comp_number--", cards_comp_number, type(cards_comp_number))
 
     def coloda(self):
         # print(self.list_num_card)
@@ -55,10 +75,9 @@ class Deck:
         # print(len(deck.coloda_after))
         # print('--Цифры которые были раньше(после перемешивания) для каждой карты после раздачи', self.coloda_after)
 
-
     def check_cards(self):
         # for i in range(len(self.coloda_after)):
-            # print(i, deck._cards[i], deck.list_num_card[i])
+        #     print(i, deck._cards[i], deck.list_num_card[i])
         if self.cards_pl not in self.coloda_after:
             print('Совпадений не обнаружено')
         if self.cards_comp not in self.coloda_after:
@@ -76,20 +95,7 @@ class Deck:
         self.player_cards.append(self.cards_pl[self.player_choice])
         self.cards_pl.remove(self.cards_pl[self.player_choice])
         print('Вы выбрали карту:\n{}'.format(self.player_cards ))
-
-    def allranks(self, x):
-        if x == '6': return 6
-        if x == '7': return 7
-        if x == '8': return 8
-        if x == '9': return 9
-        if x == '10': return 10
-        if x == 'J': return 11
-        if x == 'Q': return 12
-        if x == 'K': return 13
-        if x == 'A': return 14
-
     def computer_answer(self):
-
         print('Карты компрьютера:\n{}'.format(self.cards_comp))
         self.answer_cards = []
         for card in self.cards_comp:
@@ -131,12 +137,14 @@ class Deck:
             print('Компьютер берет.')
             self.cards_comp.append(self.player_cards)
 
-deck = Deck()
 
+deck = Deck()
+# deck.mix_cards()
 
 if __name__ == "__main__":
     deck = Deck()
     deck.mix_cards()
+    deck.list_card()
     deck.player_card()
     deck.player_hand()
     deck.computer_hand()
