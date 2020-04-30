@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>main</title>
+</head>
+<body>
+<h1>Заголовок 1</h1>
+<h6>Заголовок 6</h6>
+<p>Абзац 1</p>
+<p>Абзац 2</p>
+<a href="search.html">Go to search page</a> <br>
+<!--Ввод логина а пароля-->
+
+<form action="search.html" name="" >
+    <input type="text" name="login" value="Ваше имя"><br>
+    <input type="password" name="password" value="*****"><br>
+    <input type="checkbox" name="remember" value="yes"> Заполнить<br>
+
+<br>
+
+<!--ВЫПАДЕНИЕ ИЗ СПИСКА-->
+    <select name="menu">
+        <option value="1" selected="selected">1 позиция</option>
+        <option value="2">2 позиция</option>
+        <option value="3">3 позиция</option>
+    </select>
+
+
+<br>
+<!--МНОЖЕСТВЕННЫЙ ВЫБОР    -->
+     <select name="menu_1" multiple="'multiple">
+        <option value="1" selected="selected">1 позиция</option>
+        <option value="2">2 позиция</option>
+        <option value="3">3 позиция</option>
+        <option value="4">4 позиция</option>
+    </select>
+<br>
+    
+
+<!--ввод текста    -->
+    <textarea name="comment"></textarea>
+<br>
+    <input type="submit" name="enter" value="Отправить">
+</form>
+</body>
+</html>
