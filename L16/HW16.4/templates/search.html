@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Search</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="static/css/style.css">
+</head>
+
+<body>
+    <div class="dop-block1" >
+    <p><a href = '/' class="badge badge-primary">На главную</a></p>
+    <p><img src = 'static/img/hh_imj.jpg'></p>
+    </div>
+    <ul>
+        <li>
+            специализация: {{data['spec']}}
+        </li>
+        <li>
+            зарплата: {{data['sallary']}}
+        </li>
+        <li>
+            город: {{data['location']}}
+        </li>
+        <li>
+            удаленный режим работы: {{data['work_place']}}
+        </li>
+        <li>
+            минимальная зарплата ( в среднем): {{data['mid_sal_from']}}
+        </li>
+        <li>
+            максимальня зарплата ( в среднем): {{data['mid_sal_to']}}
+        </li>
+        <li>
+            всего вакансий : {{data['all_found']}}
+        </li>
+
+    </ul>
+
+<!--    <script src="/static/js/min.js"></script>-->
+
+
+</body>
+</html>

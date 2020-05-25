@@ -1,0 +1,54 @@
+.class-name1 {
+    color: white
+    line-height: 10em;
+    background-color: blue
+}
+
+h1 {
+    <h1>Example heading <span class="badge badge-secondary">New</span></h1>
+}
+h3 {
+    <h3>Example heading <span class="badge badge-secondary">New</span></h3>
+}
+
+div.dop-block1 {
+    position: relative;
+    float: right;
+    right: 50%;
+}
+
+div.block1 {
+  position: relative;
+  float: left;
+  left: 50%;
+}
+div.block1 p {
+   margin-top: 2.5%;
+   text-align: center;
+}
+
+div.dop-block2 {
+    margin-top: 50px;
+    position: absolute;
+    float: right;
+    right: 50%;
+}
+
+div.block2{
+  position: relative;
+  float: left;
+  left: 50%;
+}
+
+div.block1 a {
+    margin: 0;
+    position: absolute;
+    left: 33%;
+}
+
+div.block1 span {
+    margin: 10;
+    margin-bottom: 20;
+    position: absolute;
+    left: 38%;
+}
