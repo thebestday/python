@@ -18,8 +18,6 @@ def sallaryfunction(sallary, spec, location):
     pages = result['pages']
     print('все вакансии {} на {} страницах'. format(all_found, pages))
 
-
-
     salary_from = []
     salary_to =[]
 
@@ -46,7 +44,7 @@ def sallaryfunction(sallary, spec, location):
     mid_sal_from = round(sum(salary_from)/len(salary_from))
     mid_sal_to = round(sum(salary_to)/len(salary_to))
     # print ('зарплата Python-разработчика в Москве составляет в среднем  от {}руб. до {}руб.'.format(mid_sal_from, mid_sal_to ))
-
+    return mid_sal_from, mid_sal_to, all_found
 
 
 

@@ -25,10 +25,16 @@ def search_form():
     comment =  request.form['comment']
     commentcity = request.form['commentcity']
 
-    sallaryfunction(sallary, spec, location)
-    mid_sal_from= sallary.mid_sal_from
-    mid_sal_to = sallary.mid_sal_to
-    all_found = sallary.all_found
+    if comment != '':
+        spec = comment
+
+    if commentcity != '':
+        location = commentcity
+
+    mid_sal_from= sallaryfunction(sallary, spec, location)[0]
+    mid_sal_to = sallaryfunction(sallary, spec, location)[1]
+    all_found = sallaryfunction(sallary, spec, location)[2]
+
     data = {
         'spec': spec,
         'sallary': sallary,
