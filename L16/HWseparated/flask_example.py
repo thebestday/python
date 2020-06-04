@@ -31,10 +31,11 @@ def search_form():
     if commentcity != '':
         location = commentcity
 
-    mid_sal_from= sallaryfunction(sallary, spec, location)[0]
-    mid_sal_to = sallaryfunction(sallary, spec, location)[1]
-    all_found = sallaryfunction(sallary, spec, location)[2]
-
+    # mid_sal_from= sallaryfunction(sallary, spec, location)[0]
+    # mid_sal_to = sallaryfunction(sallary, spec, location)[1]
+    # all_found = sallaryfunction(sallary, spec, location)[2]
+    mid_sal_from, mid_sal_to, all_found  = sallaryfunction(sallary, spec, location)
+    
     data = {
         'spec': spec,
         'sallary': sallary,
