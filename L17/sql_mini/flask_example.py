@@ -2,7 +2,19 @@ from flask import Flask, request, render_template
 import requests
 from average_wage import sallaryfunction
 
+# spec = ""
+# sallary = ""
+# location =""
+# comment = ""
+# commentcity = ""
+# mid_sal_from =""
+# mid_sal_to = ""
+# all_found = ""
+# data = {}
+
+
 app = Flask(__name__)
+
 
 
 @app.route('/')
@@ -54,23 +66,15 @@ def search_form():
 
 
     print("зарплата {}-разработчика в {} для выбранной зарплаты от {} составляет в среднем  от {}руб. до {}руб.".format(spec, location, sallary, mid_sal_from, mid_sal_to))
+    print(spec, sallary, location, comment, commentcity, mid_sal_from, mid_sal_to, all_found)
 
-    def all_values(spec, sallary, location, comment, commentcity, mid_sal_from, mid_sal_to, all_found):
+    def all_values():
         # print(spec, sallary, location, comment, commentcity, mid_sal_from, mid_sal_to, all_found)
-        # print(spec, type(spec))
-        # print(sallary, type(sallary))
-        # print(location, type(location))
-        # print(comment, type(comment))
-        # print(commentcity, type(commentcity))
-        # print(mid_sal_from, type(mid_sal_from))
-        # print(mid_sal_to, type(mid_sal_to))
-        # print(all_found, type(all_found))
         return spec, sallary, location, comment, commentcity, mid_sal_from, mid_sal_to, all_found
-
-    # all_values(spec, sallary, location, comment, commentcity, mid_sal_from, mid_sal_to, all_found)
-
-
+    all_values()
     return render_template('search.html', data=data)
+
+
 
 
 

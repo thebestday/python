@@ -1,20 +1,14 @@
 import sqlite3 as lite
 import sys
 from flask_example import search_form
-from flask_example import all_values
+from flask_example import *
 from average_wage import sallaryfunction
+import requests
+import flask_example as repo
 
-
-spec, sallary, location, comment, commentcity, mid_sal_from, mid_sal_to, all_found = search_form()
-print(spec, sallary, location, comment, commentcity, mid_sal_from, mid_sal_to, all_found)
-print(spec, type(spec))
-print(sallary, type(sallary))
-print(location, type(location))
-print(comment, type(comment))
-print(commentcity, type(commentcity))
-print(mid_sal_from, type(mid_sal_from))
-print(mid_sal_to, type(mid_sal_to))
-print(all_found, type(all_found))
+#
+# spec, sallary, location, comment, commentcity, mid_sal_from, mid_sal_to, all_found = repo.search_form()
+# print(spec)
 
 #
 # connect = None
@@ -80,3 +74,5 @@ print(all_found, type(all_found))
 # print(mid_sal_from, type(mid_sal_from))
 # print(mid_sal_to, type(mid_sal_to))
 # print(all_found, type(all_found))
+
+
