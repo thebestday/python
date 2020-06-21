@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Main</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+<body>
+<div class="dop-block1" >
+    <div class="block1">
+        <h3 class='h3'> На этой странице вы можете ввести запрос для получения данных c HH API</h3>
+        <p> Заполните поля формы для выполнения запроса </p>
+    </div>
+
+</div>
+
+
+<br/>
+
+<div class="dop-block2" >
+    <div class="block2">
+            <form action = '/search' method="post">
+                <br/>
+                <table class="table table-bordered table-condensed">
+                    <thead>
+                        <tr class="table-active">
+                            <th> вопрос </th><th>  ваш ответ </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="table-success">
+                            <td> специализация в области IT </td> <td> <select  name="specialisation">
+                            <option value ='Python'>Python</option>
+                            <option value ='PHP'>PHP</option>
+                            </select> </td>
+                        </tr>
+                        <tr class="table-info">
+                            <td> зарплата от </td> <td> <select  name="sallary">
+                            <option value ='50000'>50000</option>
+                            <option value ='100000'>100000</option>
+                            <option value ='120000'>120000</option>
+                            </select> </td>
+                        </tr>
+                        <tr class="table-primary">
+                            <td> город </td> <td> <select  name="location">
+                            <option value ='Moscow'>Moscow</option>
+                            <option value ='Saint Petersburg'>Saint Petersburg</option>
+    <!--                        <option value ='3'>other</option>-->
+                            </select> </td>
+                        </tr>
+                        <tr class="table-warning">
+                            <td> удаленный режим работы </td>
+                            <td>  <input name = 'work_place' type = 'checkbox' checked value ='Yes'/></td>
+
+                        </tr>
+                    </tbody>
+                </table>
+                <br/>
+                <p> Ваш язык программирования</p>
+                <textarea name = 'comment' placeholder="Python"></textarea>
+                <p> Ваш город(миллионник)</p>
+                <textarea name = 'commentcity' placeholder="Moscow"></textarea>
+                <br/>
+                <input type = 'submit'  value = 'Отправить и перейти на страницу поиска' />
+            </form>
+
+        <h4>Cпасибо за то, что потратили ваше время!</h4>
+<!--        <a href = '/search' class="badge badge-primary">на страницу поиска</a>-->
+        <a href= '/contacts' class="badge badge-primary">Контакты</a>
+
+
+    </div>
+
+
+</div>
+
+<div class="block1" >
+    <div class="block2">
+            <form action = '/new_data' method="post">
+                <br/>
+                <table class="table table-bordered table-condensed">
+                    <thead>
+                        <tr class="table-active">
+                            <th> вопрос </th><th>  ваш ответ </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="table-success">
+                            <td> специализация в области IT </td> <td> <select  name="specialisation">
+                            <option value ='Python'>Python</option>
+                            <option value ='PHP'>PHP</option>
+                            </select> </td>
+                        </tr>
+                        <tr class="table-info">
+                            <td> зарплата от </td> <td> <select  name="sallary">
+                            <option value ='50000'>50000</option>
+                            <option value ='100000'>100000</option>
+                            <option value ='120000'>120000</option>
+                            </select> </td>
+                        </tr>
+                        <tr class="table-primary">
+                            <td> город </td> <td> <select  name="location">
+                            <option value ='Moscow'>Moscow</option>
+                            <option value ='Saint Petersburg'>Saint Petersburg</option>
+    <!--                        <option value ='3'>other</option>-->
+                            </select> </td>
+                        </tr>
+                        <tr class="table-warning">
+                            <td> удаленный режим работы </td>
+                            <td>  <input name = 'work_place' type = 'checkbox' checked value ='Yes'/></td>
+
+                        </tr>
+                    </tbody>
+                </table>
+                <br/>
+                <p> Ваш язык программирования</p>
+                <textarea name = 'comment' placeholder="Python"></textarea>
+                <p> Ваш город(миллионник)</p>
+                <textarea name = 'commentcity' placeholder="Moscow"></textarea>
+                <br/>
+                <br/>
+                <input type = 'submit'  value = 'CREATE DB' />
+            </form>
+
+
+
+    </div>
+
+
+</div>
+
+
+
+</body>
+</html>
