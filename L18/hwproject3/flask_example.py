@@ -56,14 +56,7 @@ def search_form2():
 
     print("зарплата {}-разработчика в {} для выбранной зарплаты от {} составляет в среднем  от {}руб. до {}руб.".format(spec, location, sallary, mid_sal_from, mid_sal_to))
     # print(work_place, type(work_place))
-    # print(spec, type(spec))
-    # print(sallary, type(sallary))
-    # print(location, type(location))
-    # print(comment, type(comment))
-    # print(commentcity, type(commentcity))
-    # print(mid_sal_from, type(mid_sal_from))
-    # print(mid_sal_to, type(mid_sal_to))
-    # print(all_found, type(all_found))
+
 
     print('-----------DB---------------')
     # создаем движок -фактичекм подключение к бд(если бызы нет то она создаться(адрес - то что после /// - можно указать путь к папке)
@@ -89,8 +82,7 @@ def search_form2():
         all_found = Column(String)
 
         # id-ник не указываем потому что он автоматически присваивается объекту
-        def __init__(self, id, spec, sallary, location, work_place, comment, commentcity, mid_sal_from, mid_sal_to, all_found):
-            self.id = id
+        def __init__(self, spec, sallary, location, work_place, comment, commentcity, mid_sal_from, mid_sal_to, all_found):
             self.spec = spec
             self.sallary = sallary
             self.location = location
@@ -102,7 +94,7 @@ def search_form2():
             self.all_found = all_found
 
         def __str__(self):
-            return f'{self.id}, {self.spec}, {self.sallary}, {self.location}, {self.work_place}, {self.comment}, {self.commentcity}, {self.mid_sal_from}, {self.mid.sal_to}, {self.all_found}'
+            return f'{self.id}, {self.spec}, {self.sallary}, {self.location}, {self.work_place}, {self.comment}, {self.commentcity}, {self.mid_sal_from}, {self.mid_sal_to}, {self.all_found}'
     # ok класс готов теперь можно запускать
 # для этого необходимо вызавать у объекта Base метод metadata и create_all() - при этом будет создана таблица которая соответсвует данному классу
     Base.metadata.create_all(engine)
@@ -111,7 +103,7 @@ def search_form2():
     Session = sessionmaker(bind=engine)
     # теперь опеределяем сессию (теперь можем в этой сессии общаться с базой данных)
     session = Session()
-    HH_request_1 = HH_request(id, spec, sallary, location, work_place, comment, commentcity, mid_sal_from, mid_sal_to, all_found)
+    HH_request_1 = HH_request(spec, sallary, location, work_place, comment, commentcity, mid_sal_from, mid_sal_to, all_found)
     session.add(HH_request_1)
     session.commit()
     
