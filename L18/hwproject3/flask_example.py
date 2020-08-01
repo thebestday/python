@@ -112,6 +112,9 @@ def search_form2():
     for hh in hh_all:
         print(hh)
 
+    print('Как получить кол-во строк который были обновлены - по аналогии с rowcount? или как правильно прописать rowcount?')
+    # print(f'rows updated: {hh_all.rowcount}')
+
     hhspec = session.query(spec)
     print(hhspec)
     
