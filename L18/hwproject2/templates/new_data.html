@@ -12,17 +12,17 @@
     <div class="dop-block1">
         <div>
             <table class="table table-bordered table-condensed">
-                <caption>
-                    Здесь можно просмотреть Ваши запросы
+                <caption style="caption-side: top; margin-left: 25px;">
+                     Здесь можно просмотреть Ваши запросы
                 </caption>
                 <thead>
                     <tr class="table-active">
-                        <th> spec </th><th> sallary </th><th> location </th><th> comment </th><th> commentcity </th> <th> mid_sal_from </th><th> mid_sal_to </th><th> all_found </th>
+                        <th> ID </th><th> spec </th><th> sallary </th><th> location </th><th> comment </th><th> commentcity </th> <th> mid_sal_from </th><th> mid_sal_to </th><th> all_found </th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr class="table-success">
-                        <td> {{data['spec']}} </td> <td> {{data['sallary']}}  </td> <td> {{data['location']}}  </td> <td> {{data['comment']}}  </td> <td> {{data['commentcity']}}  </td> <td> {{data['mid_sal_from']}}  </td> <td> {{data['mid_sal_to']}}  </td> <td> {{data['all_found']}} </td>
+                        <td> {{data['id']}} </td> <td> {{data['spec']}} </td> <td> {{data['sallary']}}  </td> <td> {{data['location']}}  </td> <td> {{data['comment']}}  </td> <td> {{data['commentcity']}}  </td> <td> {{data['mid_sal_from']}}  </td> <td> {{data['mid_sal_to']}}  </td> <td> {{data['all_found']}} </td>
                     </tr>
                 </tbody>
             </table>
@@ -38,6 +38,9 @@
             <p>зарплата {{data['spec']}}-разработчика в {{data['location']}} для выбранной зарплаты от {{data['sallary']}}</p>
             <p>составляет в среднем  от {{data['mid_sal_from']}}руб. до {{data['mid_sal_to']}}руб.</p>
             <ul>
+                <li>
+                        ID: {{data['id']}}
+                </li>
                 <li>
                         специализация: {{data['spec']}}
                 </li>

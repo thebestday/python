@@ -75,7 +75,7 @@ def search_form2():
         with connect:
             cur.execute("SELECT Count() FROM cities")
             id = cur.fetchone()[0]
-            cur.execute("INSERT INTO cities VALUES(?,?,?,?,?,?,?,?,?)", (id+1, f'{spec}', f'{sallary}', f'{location}', f'{comment}', f'{commentcity}', mid_sal_from, mid_sal_to, all_found))
+            cur.execute("INSERT INTO cities VALUES(?,?,?,?,?,?,?,?,?)", (id+1, f'{spec}', f'{sallary}', f'{location}', f'{comment}', f'{commentcity}', f'{mid_sal_from}', f'{mid_sal_to}', f'{all_found}'))
             connect.commit()
 
         for row in records:
