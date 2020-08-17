@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>First_page</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+<body>
+     <!-- Header -->
+    <div class="container">
+        <nav class="navbar navbar-expand-md">
+            <img class="img_fluid" alt="" src="{{url_for('static', filename='img/ranepa.jpeg')}}" height="70rem">
+<!--            <img class="img_fluid" alt="" src="static/img/ranepa.jpeg" height="70rem">-->
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="nav">
+                    <li class="nav-item active">
+                        <a href = '/' class="nav-link link-color">Главная<span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href = '/request_page' class="nav-link link-color">Сделать запрос</a>
+                    </li>
+                    <li class="nav-item">
+                       <a href= http://127.0.0.1:5000/new_data class="nav-link link-color">Результы запроса</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href='/contacts' class="nav-link link-color">Контакты</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+
+    <section class="home container mb-5">
+        <div class="row mt-5">
+            <div class="col-lg-6 mt-5 py-5 pl-5">
+                <img class="img-fluid" alt="" src="{{url_for('static', filename='img/01.jpg')}}">
+                <img class="img-fluid" alt="" src="static/img/fl.webp">
+            </div>
+            <div class="col-lg-6 my-auto">
+                <div class="row">
+                    <div class="home-content offset-lg-1 col-lg-10">
+                        <h2>Сделай правильный выбор!</h2>
+                        <p>Обазательно к прочтению - прежде чем стать программистом -пойми какой язык программирования учить первым!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+        <!--Footer-->
+    <div class="container">
+        <footer id="assistant" class="footer">
+            <div class="text-center py-5">
+                <h2 class="py-3">ПОИСК ВАКАНСИЙ</h2>
+                <div class="mx-auto heading-line"></div>
+            </div>
+            <div class="row mb-3">
+                <div class="col-lg-8 offset-lg-2 text-center">
+                    <p>Программа берет ваши данные формирует запрос на сайт hh.ru - помогает вам нужно сделеть правильный выбор .</p>
+<!--                    <ul class="nav justify-content-center">-->
+<!--                        <li class="nav-item">-->
+<!--                            <a class="nav-link" href='/'>Об Академии</a>-->
+<!--                        </li>-->
+<!--                        <li class="nav-item">-->
+<!--                            <a class="nav-link" href='/request_sgk'>Расчет СГК</a>-->
+<!--                        </li>-->
+<!--                        <li class="nav-item">-->
+<!--                            <a class="nav-link" href='/request_api'>Форма запроса</a>-->
+<!--                        </li>-->
+<!--                        <li class="nav-item">-->
+<!--                            <a class="nav-link" href='/contacts'>Контакты</a>-->
+<!--                        </li>-->
+<!--                    </ul>-->
+                </div>
+            </div>
+            <div class="copyright text-center py-3 border-top text-muted">
+                <p>Разработчик Good &copy; 2020</p>
+            </div>
+        </footer>
+    </div>
+
+</body>
+</html>
