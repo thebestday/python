@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>query_results</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <div>
+        <div class="block2">
+            <p><img src = 'static/img/hh_imj.jpg'></p>
+            <p>РЕЗУЛЬТАТЫ ВАШЕГО ТЕКУЩЕГО ЗАПРОСА:</p>
+            <p>зарплата {{data['spec']}}-разработчика в {{data['location']}} для выбранной зарплаты от {{data['sallary']}}</p>
+            <p>составляет в среднем  от {{data['mid_sal_from']}}руб. до {{data['mid_sal_to']}}руб.</p>
+            <ul>
+                <li>
+                        ID: {{data['HHrequest1']}}
+                </li>
+                <li>
+                        специализация: {{data['spec']}}
+                </li>
+                <li>
+                        зарплата: {{data['sallary']}}
+                </li>
+                <li>
+                        город: {{data['location']}}
+                </li>
+                <li>
+                        удаленный режим работы: {{data['work_place']}}
+                </li>
+                <li>
+                        показать 15 последних запросов: {{data['history']}}
+                </li>
+                <li>
+                        коммент : {{data['comment']}}
+                </li>
+                <li>
+                        коммент : {{data['commentcity']}}
+                </li>
+                <li>
+                        минимальная зарплата ( в среднем): {{data['mid_sal_from']}}
+                </li>
+                <li>
+                        максимальня зарплата ( в среднем): {{data['mid_sal_to']}}
+                </li>
+                <li>
+                        всего вакансий : {{data['all_found']}}
+                </li>
+                <li>
+                        вакансий с з/п в USD: {{data['salary_USD']}}
+                </li>
+            </ul>
+
+            <p><a href="/" class="badge badge-primary">На главную</a></p>
+            <p><a href="/request_page" class="badge badge-primary">На страницу запроса</a></p>
+
+
+        </div>
+    </div>
+
+
+</body>
+</html>
